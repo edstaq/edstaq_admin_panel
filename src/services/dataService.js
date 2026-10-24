@@ -2,14 +2,16 @@ import Papa from 'papaparse';
 import { timeStringToMinutes, minutesToTimeString, subtractIntervals } from '../utils/timeUtils';
 import { normalizeWeekday, getRollingWindowDates, isAllocationActiveOnDate } from '../utils/dateUtils';
 
+const BASE_URL = (import.meta.env.BASE_URL || './').replace(/\/$/, '') + '/';
+
 export const CSV_PATHS = {
-  TEACHERS: '/data/HR & Sales - Teacher.csv',
-  TEACHER_AVAILABILITY: '/data/HR & Sales - Teacher Availability.csv',
-  SUBJECTS: '/data/HR & Sales - Subjects.csv',
-  TEACHER_ASSIGN: '/data/Classroom & Session Mng - Teacher Assign.csv',
-  CLASS_MASTER: '/data/Classroom & Session Mng - Class Master.csv',
-  TEACHER_REVIEWS: '/data/HR & Sales - Teacher Review.csv',
-  DEMO_BOOK: '/data/lead_demo_book.csv'
+  TEACHERS: `${BASE_URL}data/HR & Sales - Teacher.csv`,
+  TEACHER_AVAILABILITY: `${BASE_URL}data/HR & Sales - Teacher Availability.csv`,
+  SUBJECTS: `${BASE_URL}data/HR & Sales - Subjects.csv`,
+  TEACHER_ASSIGN: `${BASE_URL}data/Classroom & Session Mng - Teacher Assign.csv`,
+  CLASS_MASTER: `${BASE_URL}data/Classroom & Session Mng - Class Master.csv`,
+  TEACHER_REVIEWS: `${BASE_URL}data/HR & Sales - Teacher Review.csv`,
+  DEMO_BOOK: `${BASE_URL}data/lead_demo_book.csv`
 };
 
 /**

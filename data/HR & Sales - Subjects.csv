@@ -1,0 +1,311 @@
+Subject ID,Category,Board,Level,Department,Stage,Subject Name,Subject Description,Subject Code,Tags,Status,Label,Student price,Teacher ID(s),Source
+SUB101,School,CBSE,LP,,Class 1,ARABIC,,,,Active,Class 1 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB102,School,CBSE,LP,,Class 1,ENGLISH,,,,Active,Class 1 - ENGLISH (CBSE),,4,https://ncert.nic.in/textbook.php
+SUB103,School,CBSE,LP,,Class 1,HINDI,,,,Active,Class 1 - HINDI (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB104,School,CBSE,LP,,Class 1,IT,,,,Active,Class 1 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB105,School,CBSE,LP,,Class 1,MALAYALAM,,,,Active,Class 1 - MALAYALAM (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB106,School,CBSE,LP,,Class 1,MATHS,,,,Active,Class 1 - MATHS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB107,School,CBSE,LP,,Class 1,SCIENCE,,,,Active,Class 1 - SCIENCE (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB108,School,CBSE,LP,,Class 1,SOCIAL,,,,Active,Class 1 - SOCIAL (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB109,School,Kerala,LP,,Class 1,ARABIC,,,,Active,Class 1 - ARABIC (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB110,School,Kerala,LP,,Class 1,BASIC SCIENCE,,,,Active,Class 1 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB111,School,Kerala,LP,,Class 1,ENGLISH,,,,Active,Class 1 - ENGLISH (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB112,School,Kerala,LP,,Class 1,HINDI,,,,Active,Class 1 - HINDI (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB113,School,Kerala,LP,,Class 1,IT,,,,Active,Class 1 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB114,School,Kerala,LP,,Class 1,MALAYALAM,,,,Active,Class 1 - MALAYALAM (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB115,School,Kerala,LP,,Class 1,MATHS,,,,Active,Class 1 - MATHS (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB117,School,Kerala,LP,,Class 1,BASIC SCIENCE (MAL),,,,Active,Class 1 - BASIC SCIENCE (MAL) (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB120,School,Kerala,LP,,Class 1,IT (MAL),,,,Active,Class 1 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB122,School,Kerala,LP,,Class 1,MATHS (MAL),,,,Active,Class 1 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB123,School,CBSE,LP,,Class 2,ARABIC,,,,Active,Class 2 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB124,School,CBSE,LP,,Class 2,ENGLISH,,,,Active,Class 2 - ENGLISH (CBSE),,4,https://ncert.nic.in/textbook.php
+SUB125,School,CBSE,LP,,Class 2,HINDI,,,,Active,Class 2 - HINDI (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB126,School,CBSE,LP,,Class 2,IT,,,,Active,Class 2 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB127,School,CBSE,LP,,Class 2,MALAYALAM,,,,Active,Class 2 - MALAYALAM (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB128,School,CBSE,LP,,Class 2,MATHS,,,,Active,Class 2 - MATHS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB129,School,CBSE,LP,,Class 2,SCIENCE,,,,Active,Class 2 - SCIENCE (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB130,School,CBSE,LP,,Class 2,SOCIAL,,,,Active,Class 2 - SOCIAL (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB131,School,Kerala,LP,,Class 2,ARABIC,,,,Active,Class 2 - ARABIC (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB132,School,Kerala,LP,,Class 2,BASIC SCIENCE,,,,Active,Class 2 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB133,School,Kerala,LP,,Class 2,ENGLISH,,,,Active,Class 2 - ENGLISH (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB134,School,Kerala,LP,,Class 2,HINDI,,,,Active,Class 2 - HINDI (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB135,School,Kerala,LP,,Class 2,IT,,,,Active,Class 2 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB136,School,Kerala,LP,,Class 2,MALAYALAM,,,,Active,Class 2 - MALAYALAM (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB137,School,Kerala,LP,,Class 2,MATHS,,,,Active,Class 2 - MATHS (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB139,School,Kerala,LP,,Class 2,BASIC SCIENCE (MAL),,,,Active,Class 2 - BASIC SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB142,School,Kerala,LP,,Class 2,IT (MAL),,,,Active,Class 2 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB144,School,Kerala,LP,,Class 2,MATHS (MAL),,,,Active,Class 2 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB145,School,CBSE,LP,,Class 3,ARABIC,,,,Active,Class 3 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB146,School,CBSE,LP,,Class 3,ENGLISH,,,,Active,Class 3 - ENGLISH (CBSE),,4,https://ncert.nic.in/textbook.php
+SUB147,School,CBSE,LP,,Class 3,HINDI,,,,Active,Class 3 - HINDI (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB148,School,CBSE,LP,,Class 3,IT,,,,Active,Class 3 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB149,School,CBSE,LP,,Class 3,MALAYALAM,,,,Active,Class 3 - MALAYALAM (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB150,School,CBSE,LP,,Class 3,MATHS,,,,Active,Class 3 - MATHS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB151,School,CBSE,LP,,Class 3,SCIENCE,,,,Active,Class 3 - SCIENCE (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB152,School,CBSE,LP,,Class 3,SOCIAL,,,,Active,Class 3 - SOCIAL (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB153,School,Kerala,LP,,Class 3,ARABIC,,,,Active,Class 3 - ARABIC (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB154,School,Kerala,LP,,Class 3,BASIC SCIENCE,,,,Active,Class 3 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB155,School,Kerala,LP,,Class 3,ENGLISH,,,,Active,Class 3 - ENGLISH (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB156,School,Kerala,LP,,Class 3,HINDI,,,,Active,Class 3 - HINDI (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB157,School,Kerala,LP,,Class 3,IT,,,,Active,Class 3 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB158,School,Kerala,LP,,Class 3,MALAYALAM,,,,Active,Class 3 - MALAYALAM (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB159,School,Kerala,LP,,Class 3,MATHS,,,,Active,Class 3 - MATHS (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB161,School,Kerala,LP,,Class 3,BASIC SCIENCE (MAL),,,,Active,Class 3 - BASIC SCIENCE (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB164,School,Kerala,LP,,Class 3,IT (MAL),,,,Active,Class 3 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB166,School,Kerala,LP,,Class 3,MATHS (MAL),,,,Active,Class 3 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB167,School,CBSE,LP,,Class 4,ARABIC,,,,Active,Class 4 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB168,School,CBSE,LP,,Class 4,ENGLISH,,,,Active,Class 4 - ENGLISH (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB169,School,CBSE,LP,,Class 4,HINDI,,,,Active,Class 4 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB170,School,CBSE,LP,,Class 4,IT,,,,Active,Class 4 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB171,School,CBSE,LP,,Class 4,MALAYALAM,,,,Active,Class 4 - MALAYALAM (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB172,School,CBSE,LP,,Class 4,MATHS,,,,Active,Class 4 - MATHS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB173,School,CBSE,LP,,Class 4,SCIENCE,,,,Active,Class 4 - SCIENCE (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB174,School,CBSE,LP,,Class 4,SOCIAL,,,,Active,Class 4 - SOCIAL (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB175,School,Kerala,LP,,Class 4,ARABIC,,,,Active,Class 4 - ARABIC (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB176,School,Kerala,LP,,Class 4,BASIC SCIENCE,,,,Active,Class 4 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB177,School,Kerala,LP,,Class 4,ENGLISH,,,,Active,Class 4 - ENGLISH (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB178,School,Kerala,LP,,Class 4,HINDI,,,,Active,Class 4 - HINDI (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB179,School,Kerala,LP,,Class 4,IT,,,,Active,Class 4 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB180,School,Kerala,LP,,Class 4,MALAYALAM,,,,Active,Class 4 - MALAYALAM (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB181,School,Kerala,LP,,Class 4,MATHS,,,,Active,Class 4 - MATHS (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB183,School,Kerala,LP,,Class 4,BASIC SCIENCE (MAL),,,,Active,Class 4 - BASIC SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB186,School,Kerala,LP,,Class 4,IT (MAL),,,,Active,Class 4 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB188,School,Kerala,LP,,Class 4,MATHS (MAL),,,,Active,Class 4 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB189,School,CBSE,UP,,Class 5,ARABIC,,,,Active,Class 5 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB190,School,CBSE,UP,,Class 5,ENGLISH,,,,Active,Class 5 - ENGLISH (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB191,School,CBSE,UP,,Class 5,HINDI,,,,Active,Class 5 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB192,School,CBSE,UP,,Class 5,IT,,,,Active,Class 5 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB193,School,CBSE,UP,,Class 5,MALAYALAM,,,,Active,Class 5 - MALAYALAM (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB194,School,CBSE,UP,,Class 5,MATHS,,,,Active,Class 5 - MATHS (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB195,School,CBSE,UP,,Class 5,SCIENCE,,,,Active,Class 5 - SCIENCE (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB196,School,CBSE,UP,,Class 5,SOCIAL,,,,Active,Class 5 - SOCIAL (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB197,School,Kerala,UP,,Class 5,ARABIC,,,,Active,Class 5 - ARABIC (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB198,School,Kerala,UP,,Class 5,BASIC SCIENCE,,,,Active,Class 5 - BASIC SCIENCE (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB199,School,Kerala,UP,,Class 5,ENGLISH,,,,Active,Class 5 - ENGLISH (Kerala),,4,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB200,School,Kerala,UP,,Class 5,HINDI,,,,Active,Class 5 - HINDI (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB201,School,Kerala,UP,,Class 5,IT,,,,Active,Class 5 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB202,School,Kerala,UP,,Class 5,MALAYALAM,,,,Active,Class 5 - MALAYALAM (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB203,School,Kerala,UP,,Class 5,MATHS,,,,Active,Class 5 - MATHS (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB204,School,Kerala,UP,,Class 5,SOCIAL SCIENCE,,,,Active,Class 5 - SOCIAL SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB206,School,Kerala,UP,,Class 5,BASIC SCIENCE (MAL),,,,Active,Class 5 - BASIC SCIENCE (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB209,School,Kerala,UP,,Class 5,IT (MAL),,,,Active,Class 5 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB211,School,Kerala,UP,,Class 5,MATHS (MAL),,,,Active,Class 5 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB212,School,Kerala,UP,,Class 5,SOCIAL SCIENCE (MAL),,,,Active,Class 5 - SOCIAL SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB213,School,CBSE,UP,,Class 6,ARABIC,,,,Active,Class 6 - ARABIC (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB214,School,CBSE,UP,,Class 6,ENGLISH,,,,Active,Class 6 - ENGLISH (CBSE),,4,https://ncert.nic.in/textbook.php
+SUB215,School,CBSE,UP,,Class 6,HINDI,,,,Active,Class 6 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB216,School,CBSE,UP,,Class 6,IT,,,,Active,Class 6 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB217,School,CBSE,UP,,Class 6,MALAYALAM,,,,Active,Class 6 - MALAYALAM (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB218,School,CBSE,UP,,Class 6,MATHS,,,,Active,Class 6 - MATHS (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB219,School,CBSE,UP,,Class 6,SCIENCE,,,,Active,Class 6 - SCIENCE (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB220,School,CBSE,UP,,Class 6,SOCIAL,,,,Active,Class 6 - SOCIAL (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB221,School,Kerala,UP,,Class 6,ARABIC,,,,Active,Class 6 - ARABIC (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB222,School,Kerala,UP,,Class 6,BASIC SCIENCE,,,,Active,Class 6 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB223,School,Kerala,UP,,Class 6,ENGLISH,,,,Active,Class 6 - ENGLISH (Kerala),,4,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB224,School,Kerala,UP,,Class 6,HINDI,,,,Active,Class 6 - HINDI (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB225,School,Kerala,UP,,Class 6,IT,,,,Active,Class 6 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB226,School,Kerala,UP,,Class 6,MALAYALAM,,,,Active,Class 6 - MALAYALAM (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB227,School,Kerala,UP,,Class 6,MATHS,,,,Active,Class 6 - MATHS (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB228,School,Kerala,UP,,Class 6,SOCIAL SCIENCE,,,,Active,Class 6 - SOCIAL SCIENCE (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB230,School,Kerala,UP,,Class 6,BASIC SCIENCE (MAL),,,,Active,Class 6 - BASIC SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB233,School,Kerala,UP,,Class 6,IT (MAL),,,,Active,Class 6 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB235,School,Kerala,UP,,Class 6,MATHS (MAL),,,,Active,Class 6 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB236,School,Kerala,UP,,Class 6,SOCIAL SCIENCE (MAL),,,,Active,Class 6 - SOCIAL SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB237,School,CBSE,UP,,Class 7,ARABIC,,,,Active,Class 7 - ARABIC (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB238,School,CBSE,UP,,Class 7,ENGLISH,,,,Active,Class 7 - ENGLISH (CBSE),,4,https://ncert.nic.in/textbook.php
+SUB239,School,CBSE,UP,,Class 7,HINDI,,,,Active,Class 7 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB240,School,CBSE,UP,,Class 7,IT,,,,Active,Class 7 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB241,School,CBSE,UP,,Class 7,MALAYALAM,,,,Active,Class 7 - MALAYALAM (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB242,School,CBSE,UP,,Class 7,MATHS,,,,Active,Class 7 - MATHS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB243,School,CBSE,UP,,Class 7,SCIENCE,,,,Active,Class 7 - SCIENCE (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB244,School,CBSE,UP,,Class 7,SOCIAL,,,,Active,Class 7 - SOCIAL (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB245,School,Kerala,UP,,Class 7,ARABIC,,,,Active,Class 7 - ARABIC (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB246,School,Kerala,UP,,Class 7,BASIC SCIENCE,,,,Active,Class 7 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB247,School,Kerala,UP,,Class 7,ENGLISH,,,,Active,Class 7 - ENGLISH (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB248,School,Kerala,UP,,Class 7,HINDI,,,,Active,Class 7 - HINDI (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB249,School,Kerala,UP,,Class 7,IT,,,,Active,Class 7 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB250,School,Kerala,UP,,Class 7,MALAYALAM,,,,Active,Class 7 - MALAYALAM (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB251,School,Kerala,UP,,Class 7,MATHS,,,,Active,Class 7 - MATHS (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB252,School,Kerala,UP,,Class 7,SOCIAL SCIENCE,,,,Active,Class 7 - SOCIAL SCIENCE (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB254,School,Kerala,UP,,Class 7,BASIC SCIENCE (MAL),,,,Active,Class 7 - BASIC SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB257,School,Kerala,UP,,Class 7,IT (MAL),,,,Active,Class 7 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB259,School,Kerala,UP,,Class 7,MATHS (MAL),,,,Active,Class 7 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB260,School,Kerala,UP,,Class 7,SOCIAL SCIENCE (MAL),,,,Active,Class 7 - SOCIAL SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB261,School,CBSE,HS,,Class 8,ARABIC,,,,Active,Class 8 - ARABIC (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB262,School,CBSE,HS,,Class 8,ENGLISH,,,,Active,Class 8 - ENGLISH (CBSE),,3,https://ncert.nic.in/textbook.php
+SUB263,School,CBSE,HS,,Class 8,HINDI,,,,Active,Class 8 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB264,School,CBSE,HS,,Class 8,IT,,,,Active,Class 8 - IT (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB265,School,CBSE,HS,,Class 8,MALAYALAM,,,,Active,Class 8 - MALAYALAM (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB266,School,CBSE,HS,,Class 8,MATHS,,,,Active,Class 8 - MATHS (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB267,School,CBSE,HS,,Class 8,SCIENCE,,,,Active,Class 8 - SCIENCE (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB268,School,CBSE,HS,,Class 8,SOCIAL,,,,Active,Class 8 - SOCIAL (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB269,School,Kerala,HS,,Class 8,ARABIC,,,,Active,Class 8 - ARABIC (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB270,School,Kerala,HS,,Class 8,BASIC SCIENCE,,,,Active,Class 8 - BASIC SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB271,School,Kerala,HS,,Class 8,ENGLISH,,,,Active,Class 8 - ENGLISH (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB272,School,Kerala,HS,,Class 8,HINDI,,,,Active,Class 8 - HINDI (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB273,School,Kerala,HS,,Class 8,IT,,,,Active,Class 8 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB274,School,Kerala,HS,,Class 8,MALAYALAM,,,,Active,Class 8 - MALAYALAM (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB275,School,Kerala,HS,,Class 8,MATHS,,,,Active,Class 8 - MATHS (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB276,School,Kerala,HS,,Class 8,SOCIAL SCIENCE,,,,Active,Class 8 - SOCIAL SCIENCE (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB278,School,Kerala,HS,,Class 8,BASIC SCIENCE (MAL),,,,Active,Class 8 - BASIC SCIENCE (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB281,School,Kerala,HS,,Class 8,IT (MAL),,,,Active,Class 8 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB283,School,Kerala,HS,,Class 8,MATHS (MAL),,,,Active,Class 8 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB284,School,Kerala,HS,,Class 8,SOCIAL SCIENCE (MAL),,,,Active,Class 8 - SOCIAL SCIENCE (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB285,School,CBSE,HS,,Class 9,ARABIC,,,,Active,Class 9 - ARABIC (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB286,School,CBSE,HS,,Class 9,ENGLISH,,,,Active,Class 9 - ENGLISH (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB287,School,CBSE,HS,,Class 9,HINDI,,,,Active,Class 9 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB288,School,CBSE,HS,,Class 9,MALAYALAM,,,,Active,Class 9 - MALAYALAM (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB289,School,CBSE,HS,,Class 9,MATHS,,,,Active,Class 9 - MATHS (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB290,School,CBSE,HS,,Class 9,SCIENCE,,,,Active,Class 9 - SCIENCE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB291,School,CBSE,HS,,Class 9,SOCIAL,,,,Active,Class 9 - SOCIAL (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB292,School,Kerala,HS,,Class 9,ARABIC,,,,Active,Class 9 - ARABIC (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB293,School,Kerala,HS,,Class 9,BIOLOGY,,,,Active,Class 9 - BIOLOGY (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB294,School,Kerala,HS,,Class 9,CHEMISTRY,,,,Active,Class 9 - CHEMISTRY (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB295,School,Kerala,HS,,Class 9,ENGLISH,,,,Active,Class 9 - ENGLISH (Kerala),,4,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB296,School,Kerala,HS,,Class 9,HINDI,,,,Active,Class 9 - HINDI (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB297,School,Kerala,HS,,Class 9,IT,,,,Active,Class 9 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB298,School,Kerala,HS,,Class 9,MALAYALAM,,,,Active,Class 9 - MALAYALAM (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB299,School,Kerala,HS,,Class 9,MATHS,,,,Active,Class 9 - MATHS (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB300,School,Kerala,HS,,Class 9,PHYSICS,,,,Active,Class 9 - PHYSICS (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB301,School,Kerala,HS,,Class 9,SOCIAL SCIENCE 1,,,,Active,Class 9 - SOCIAL SCIENCE 1 (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB302,School,Kerala,HS,,Class 9,SOCIAL SCIENCE 2,,,,Active,Class 9 - SOCIAL SCIENCE 2 (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB304,School,Kerala,HS,,Class 9,BIOLOGY (MAL),,,,Active,Class 9 - BIOLOGY (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB305,School,Kerala,HS,,Class 9,CHEMISTRY (MAL),,,,Active,Class 9 - CHEMISTRY (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB308,School,Kerala,HS,,Class 9,IT (MAL),,,,Active,Class 9 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB310,School,Kerala,HS,,Class 9,MATHS (MAL),,,,Active,Class 9 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB311,School,Kerala,HS,,Class 9,PHYSICS (MAL),,,,Active,Class 9 - PHYSICS (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB312,School,Kerala,HS,,Class 9,SOCIAL SCIENCE 1 (MAL),,,,Active,Class 9 - SOCIAL SCIENCE 1 (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB313,School,Kerala,HS,,Class 9,SOCIAL SCIENCE 2 (MAL),,,,Active,Class 9 - SOCIAL SCIENCE 2 (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB314,School,CBSE,HS,,Class 10,ARABIC,,,,Active,Class 10 - ARABIC (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB315,School,CBSE,HS,,Class 10,ENGLISH,,,,Active,Class 10 - ENGLISH (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB316,School,CBSE,HS,,Class 10,HINDI,,,,Active,Class 10 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB317,School,CBSE,HS,,Class 10,MALAYALAM,,,,Active,Class 10 - MALAYALAM (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB318,School,CBSE,HS,,Class 10,MATHS,,,,Active,Class 10 - MATHS (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB319,School,CBSE,HS,,Class 10,SCIENCE,,,,Active,Class 10 - SCIENCE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB320,School,CBSE,HS,,Class 10,SOCIAL,,,,Active,Class 10 - SOCIAL (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB321,School,Kerala,HS,,Class 10,ARABIC,,,,Active,Class 10 - ARABIC (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB322,School,Kerala,HS,,Class 10,BIOLOGY,,,,Active,Class 10 - BIOLOGY (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB323,School,Kerala,HS,,Class 10,CHEMISTRY,,,,Active,Class 10 - CHEMISTRY (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB324,School,Kerala,HS,,Class 10,ENGLISH,,,,Active,Class 10 - ENGLISH (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB325,School,Kerala,HS,,Class 10,HINDI,,,,Active,Class 10 - HINDI (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB326,School,Kerala,HS,,Class 10,IT,,,,Active,Class 10 - IT (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB327,School,Kerala,HS,,Class 10,MALAYALAM,,,,Active,Class 10 - MALAYALAM (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB328,School,Kerala,HS,,Class 10,MATHS,,,,Active,Class 10 - MATHS (Kerala),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB329,School,Kerala,HS,,Class 10,PHYSICS,,,,Active,Class 10 - PHYSICS (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB330,School,Kerala,HS,,Class 10,SOCIAL SCIENCE 1,,,,Active,Class 10 - SOCIAL SCIENCE 1 (Kerala),,3,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB331,School,Kerala,HS,,Class 10,SOCIAL SCIENCE 2,,,,Active,Class 10 - SOCIAL SCIENCE 2 (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB333,School,Kerala,HS,,Class 10,BIOLOGY (MAL),,,,Active,Class 10 - BIOLOGY (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB334,School,Kerala,HS,,Class 10,CHEMISTRY (MAL),,,,Active,Class 10 - CHEMISTRY (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB337,School,Kerala,HS,,Class 10,IT (MAL),,,,Active,Class 10 - IT (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB339,School,Kerala,HS,,Class 10,MATHS (MAL),,,,Active,Class 10 - MATHS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB340,School,Kerala,HS,,Class 10,PHYSICS (MAL),,,,Active,Class 10 - PHYSICS (MAL) (Kerala),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB341,School,Kerala,HS,,Class 10,SOCIAL SCIENCE 1 (MAL),,,,Active,Class 10 - SOCIAL SCIENCE 1 (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB342,School,Kerala,HS,,Class 10,SOCIAL SCIENCE 2 (MAL),,,,Active,Class 10 - SOCIAL SCIENCE 2 (MAL) (Kerala),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB343,School,CBSE,HSS,,Plus 1,ENGLISH,,,,Active,Plus 1 - ENGLISH (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB344,School,CBSE,HSS,,Plus 1,MALAYALAM,,,,Active,Plus 1 - MALAYALAM (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB345,School,CBSE,HSS,,Plus 1,HINDI,,,,Active,Plus 1 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB346,School,CBSE,HSS,,Plus 1,PHYSICS,,,,Active,Plus 1 - PHYSICS (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB347,School,CBSE,HSS,,Plus 1,CHEMISTRY,,,,Active,Plus 1 - CHEMISTRY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB348,School,CBSE,HSS,,Plus 1,BIOLOGY,,,,Active,Plus 1 - BIOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB349,School,CBSE,HSS,,Plus 1,MATHEMATICS,,,,Active,Plus 1 - MATHEMATICS (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB350,School,CBSE,HSS,,Plus 1,PSYCHOLOGY,,,,Active,Plus 1 - PSYCHOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB351,School,CBSE,HSS,,Plus 1,GEOGRAPHY,,,,Active,Plus 1 - GEOGRAPHY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB352,School,CBSE,HSS,,Plus 1,ARABIC,,,,Active,Plus 1 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB353,School,CBSE,HSS,,Plus 1,SOCIOLOGY,,,,Active,Plus 1 - SOCIOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB354,School,CBSE,HSS,,Plus 1,POLTICAL SCIENCE,,,,Active,Plus 1 - POLTICAL SCIENCE (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB355,School,CBSE,HSS,,Plus 1,HISTORY,,,,Active,Plus 1 - HISTORY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB356,School,CBSE,HSS,,Plus 1,ECONOMICS,,,,Active,Plus 1 - ECONOMICS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB357,School,CBSE,HSS,,Plus 1,BUSINESS STUDIES,,,,Active,Plus 1 - BUSINESS STUDIES (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB358,School,CBSE,HSS,,Plus 1,HOME SCIENCE,,,,Active,Plus 1 - HOME SCIENCE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB359,School,CBSE,HSS,,Plus 1,CREATIVE WRITING AND TRANASLATION,,,,Active,Plus 1 - CREATIVE WRITING AND TRANASLATION (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB360,School,CBSE,HSS,,Plus 1,INFOMATICS PRACTICE,,,,Active,Plus 1 - INFOMATICS PRACTICE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB361,School,CBSE,HSS,,Plus 1,COMPUTER SCIENCE,,,,Active,Plus 1 - COMPUTER SCIENCE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB362,School,CBSE,HSS,,Plus 1,HEALTH AND FITNESS EDUCATION ,,,,Active,Plus 1 - HEALTH AND FITNESS EDUCATION  (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB363,School,CBSE,HSS,,Plus 1,BIOTECHNOLOGY,,,,Active,Plus 1 - BIOTECHNOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB364,School,CBSE,HSS,,Plus 1,KNOWLEDGE TRADITION PRACTRICES OF INDIA,,,,Active,Plus 1 - KNOWLEDGE TRADITION PRACTRICES OF INDIA (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB365,School,CBSE,HSS,,Plus 1,FINE ART,,,,Active,Plus 1 - FINE ART (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB366,School,CBSE,HSS,,Plus 1,SANGEET,,,,Active,Plus 1 - SANGEET (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB367,School,CBSE,HSS,,Plus 1,ACCOUNTANCY,,,,Active,Plus 1 - ACCOUNTANCY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB368,School,CBSE,HSS,,Plus 2,ENGLISH,,,,Active,Plus 2 - ENGLISH (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB369,School,CBSE,HSS,,Plus 2,MALAYALAM,,,,Active,Plus 2 - MALAYALAM (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB370,School,CBSE,HSS,,Plus 2,HINDI,,,,Active,Plus 2 - HINDI (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB371,School,CBSE,HSS,,Plus 2,PHYSICS,,,,Active,Plus 2 - PHYSICS (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB372,School,CBSE,HSS,,Plus 2,CHEMISTRY,,,,Active,Plus 2 - CHEMISTRY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB373,School,CBSE,HSS,,Plus 2,BIOLOGY,,,,Active,Plus 2 - BIOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB374,School,CBSE,HSS,,Plus 2,MATHEMATICS,,,,Active,Plus 2 - MATHEMATICS (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB375,School,CBSE,HSS,,Plus 2,PSYCHOLOGY,,,,Active,Plus 2 - PSYCHOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB376,School,CBSE,HSS,,Plus 2,GEOGRAPHY,,,,Active,Plus 2 - GEOGRAPHY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB377,School,CBSE,HSS,,Plus 2,ARABIC,,,,Active,Plus 2 - ARABIC (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB378,School,CBSE,HSS,,Plus 2,SOCIOLOGY,,,,Active,Plus 2 - SOCIOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB379,School,CBSE,HSS,,Plus 2,POLTICAL SCIENCE,,,,Active,Plus 2 - POLTICAL SCIENCE (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB380,School,CBSE,HSS,,Plus 2,HISTORY,,,,Active,Plus 2 - HISTORY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB381,School,CBSE,HSS,,Plus 2,ECONOMICS,,,,Active,Plus 2 - ECONOMICS (CBSE),,2,https://ncert.nic.in/textbook.php
+SUB382,School,CBSE,HSS,,Plus 2,BUSINESS STUDIES,,,,Active,Plus 2 - BUSINESS STUDIES (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB383,School,CBSE,HSS,,Plus 2,ACCOUNTANCY,,,,Active,Plus 2 - ACCOUNTANCY (CBSE),,1,https://ncert.nic.in/textbook.php
+SUB384,School,CBSE,HSS,,Plus 2,HOME SCIENCE,,,,Active,Plus 2 - HOME SCIENCE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB385,School,CBSE,HSS,,Plus 2,CREATIVE WRITING AND TRANASLATION,,,,Active,Plus 2 - CREATIVE WRITING AND TRANASLATION (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB386,School,CBSE,HSS,,Plus 2,INFOMATICS PRACTICE,,,,Active,Plus 2 - INFOMATICS PRACTICE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB387,School,CBSE,HSS,,Plus 2,COMPUTER SCIENCE,,,,Active,Plus 2 - COMPUTER SCIENCE (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB388,School,CBSE,HSS,,Plus 2,HEALTH AND FITNESS EDUCATION ,,,,Active,Plus 2 - HEALTH AND FITNESS EDUCATION  (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB389,School,CBSE,HSS,,Plus 2,BIOTECHNOLOGY,,,,Active,Plus 2 - BIOTECHNOLOGY (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB390,School,CBSE,HSS,,Plus 2,KNOWLEDGE TRADITION PRACTRICES OF INDIA,,,,Active,Plus 2 - KNOWLEDGE TRADITION PRACTRICES OF INDIA (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB391,School,CBSE,HSS,,Plus 2,FINE ART,,,,Active,Plus 2 - FINE ART (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB392,School,CBSE,HSS,,Plus 2,SANGEET,,,,Active,Plus 2 - SANGEET (CBSE),,0,https://ncert.nic.in/textbook.php
+SUB393,School,KERALA,HSS,,Plus 1,ENGLISH,,,,Active,Plus 1 - ENGLISH (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB394,School,KERALA,HSS,,Plus 1,MALAYALAM,,,,Active,Plus 1 - MALAYALAM (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB395,School,KERALA,HSS,,Plus 1,HINDI,,,,Active,Plus 1 - HINDI (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB396,School,KERALA,HSS,,Plus 1,PHYSICS,,,,Active,Plus 1 - PHYSICS (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB397,School,KERALA,HSS,,Plus 1,CHEMISTRY,,,,Active,Plus 1 - CHEMISTRY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB398,School,KERALA,HSS,,Plus 1,BIOLOGY,,,,Active,Plus 1 - BIOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB399,School,KERALA,HSS,,Plus 1,MATHEMATICS,,,,Active,Plus 1 - MATHEMATICS (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB400,School,KERALA,HSS,,Plus 1,PSYCHOLOGY,,,,Active,Plus 1 - PSYCHOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB401,School,KERALA,HSS,,Plus 1,GEOGRAPHY,,,,Active,Plus 1 - GEOGRAPHY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB402,School,KERALA,HSS,,Plus 1,ARABIC,,,,Active,Plus 1 - ARABIC (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB403,School,KERALA,HSS,,Plus 1,SOCIOLOGY,,,,Active,Plus 1 - SOCIOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB404,School,KERALA,HSS,,Plus 1,POLTICAL SCIENCE,,,,Active,Plus 1 - POLTICAL SCIENCE (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB405,School,KERALA,HSS,,Plus 1,HISTORY,,,,Active,Plus 1 - HISTORY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB406,School,KERALA,HSS,,Plus 1,ECONOMICS,,,,Active,Plus 1 - ECONOMICS (KERALA),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB407,School,KERALA,HSS,,Plus 1,BUSINESS STUDIES,,,,Active,Plus 1 - BUSINESS STUDIES (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB408,School,KERALA,HSS,,Plus 1,ACCOUNTANCY COMPUTERISED ACCOUNTING (CA),,,,Active,Plus 1 - ACCOUNTANCY COMPUTERISED ACCOUNTING (CA) (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB409,School,KERALA,HSS,,Plus 1,HOME SCIENCE,,,,Active,Plus 1 - HOME SCIENCE (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB410,School,KERALA,HSS,,Plus 1,STATISTICS,,,,Active,Plus 1 - STATISTICS (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB411,School,KERALA,HSS,,Plus 1,ACCOUNTANCY ANALYSIS OF FINANCIAL STATEMENT  (AFS),,,,Active,Plus 1 - ACCOUNTANCY ANALYSIS OF FINANCIAL STATEMENT  (AFS) (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB412,School,KERALA,HSS,,Plus 1,COMPUTER SCIENCE,,,,Active,Plus 1 - COMPUTER SCIENCE (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB413,School,KERALA,HSS,,Plus 1,COMPUTER APPLICATION,,,,Active,Plus 1 - COMPUTER APPLICATION (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB414,School,KERALA,HSS,,Plus 1,MATHEMATICS COMMERCE,,,,Active,Plus 1 - MATHEMATICS COMMERCE (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB415,School,KERALA,HSS,,Plus 1,JOURNALISM,,,,Active,Plus 1 - JOURNALISM (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB416,School,KERALA,HSS,,Plus 1,COMMUNICATIVE ENGLISH ,,,,Active,Plus 1 - COMMUNICATIVE ENGLISH  (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB417,School,KERALA,HSS,,Plus 1,ISLAMIC HISTORY,,,,Active,Plus 1 - ISLAMIC HISTORY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB418,School,KERALA,HSS,,Plus 1,ANTHROPOLGY,,,,Active,Plus 1 - ANTHROPOLGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB419,School,KERALA,HSS,,Plus 1,SOCIAL WORK ,,,,Active,Plus 1 - SOCIAL WORK  (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB420,School,KERALA,HSS,,Plus 1,PHILOSOPHY,,,,Active,Plus 1 - PHILOSOPHY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB421,School,KERALA,HSS,,Plus 1,GEOLOGY,,,,Active,Plus 1 - GEOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB422,School,KERALA,HSS,,Plus 2,ENGLISH,,,,Active,Plus 2 - ENGLISH (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB423,School,KERALA,HSS,,Plus 2,MALAYALAM,,,,Active,Plus 2 - MALAYALAM (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB424,School,KERALA,HSS,,Plus 2,HINDI,,,,Active,Plus 2 - HINDI (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB425,School,KERALA,HSS,,Plus 2,PHYSICS,,,,Active,Plus 2 - PHYSICS (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB426,School,KERALA,HSS,,Plus 2,CHEMISTRY,,,,Active,Plus 2 - CHEMISTRY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB427,School,KERALA,HSS,,Plus 2,BIOLOGY,,,,Active,Plus 2 - BIOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB428,School,KERALA,HSS,,Plus 2,MATHEMATICS,,,,Active,Plus 2 - MATHEMATICS (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB429,School,KERALA,HSS,,Plus 2,PSYCHOLOGY,,,,Active,Plus 2 - PSYCHOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB430,School,KERALA,HSS,,Plus 2,GEOGRAPHY,,,,Active,Plus 2 - GEOGRAPHY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB431,School,KERALA,HSS,,Plus 2,ARABIC,,,,Active,Plus 2 - ARABIC (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB432,School,KERALA,HSS,,Plus 2,SOCIOLOGY,,,,Active,Plus 2 - SOCIOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB433,School,KERALA,HSS,,Plus 2,POLTICAL SCIENCE,,,,Active,Plus 2 - POLTICAL SCIENCE (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB434,School,KERALA,HSS,,Plus 2,HISTORY,,,,Active,Plus 2 - HISTORY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB435,School,KERALA,HSS,,Plus 2,ECONOMICS,,,,Active,Plus 2 - ECONOMICS (KERALA),,2,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB436,School,KERALA,HSS,,Plus 2,BUSINESS STUDIES,,,,Active,Plus 2 - BUSINESS STUDIES (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB437,School,KERALA,HSS,,Plus 2,ACCOUNTANCY COMPUTERISED ACCOUNTING (CA),,,,Active,Plus 2 - ACCOUNTANCY COMPUTERISED ACCOUNTING (CA) (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB438,School,KERALA,HSS,,Plus 2,HOME SCIENCE,,,,Active,Plus 2 - HOME SCIENCE (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB439,School,KERALA,HSS,,Plus 2,STATISTICS,,,,Active,Plus 2 - STATISTICS (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB440,School,KERALA,HSS,,Plus 2,ACCOUNTANCY ANALYSIS OF FINANCIAL STATEMENT  (AFS),,,,Active,Plus 2 - ACCOUNTANCY ANALYSIS OF FINANCIAL STATEMENT  (AFS) (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB441,School,KERALA,HSS,,Plus 2,COMPUTER SCIENCE,,,,Active,Plus 2 - COMPUTER SCIENCE (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB442,School,KERALA,HSS,,Plus 2,COMPUTER APPLICATION,,,,Active,Plus 2 - COMPUTER APPLICATION (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB443,School,KERALA,HSS,,Plus 2,MATHEMATICS COMMERCE,,,,Active,Plus 2 - MATHEMATICS COMMERCE (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB444,School,KERALA,HSS,,Plus 2,JOURNALISM,,,,Active,Plus 2 - JOURNALISM (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB445,School,KERALA,HSS,,Plus 2,COMMUNICATIVE ENGLISH ,,,,Active,Plus 2 - COMMUNICATIVE ENGLISH  (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB446,School,KERALA,HSS,,Plus 2,ISLAMIC HISTORY,,,,Active,Plus 2 - ISLAMIC HISTORY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB447,School,KERALA,HSS,,Plus 2,ANTHROPOLGY,,,,Active,Plus 2 - ANTHROPOLGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB448,School,KERALA,HSS,,Plus 2,SOCIAL WORK ,,,,Active,Plus 2 - SOCIAL WORK  (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB449,School,KERALA,HSS,,Plus 2,PHILOSOPHY,,,,Active,Plus 2 - PHILOSOPHY (KERALA),,1,https://samagra.kite.kerala.gov.in/#/textbook/page
+SUB450,School,KERALA,HSS,,Plus 2,GEOLOGY,,,,Active,Plus 2 - GEOLOGY (KERALA),,0,https://samagra.kite.kerala.gov.in/#/textbook/page

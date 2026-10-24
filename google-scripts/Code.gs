@@ -12,7 +12,8 @@
 // Configuration: Replace with your Spreadsheet IDs if they ever change
 var SPREADSHEET_IDS = {
   HR_AND_SALES: "1ZgBm9UTj9JIpQ_Iq2V8O8IVPNNXUazntu-KrLpORg_I",
-  CLASSROOM_MNG: "16TYFgItwYH8VgNK_Hpn7BeDQ-xMt41pS2ZD8dLeAJLw"
+  CLASSROOM_MNG: "16TYFgItwYH8VgNK_Hpn7BeDQ-xMt41pS2ZD8dLeAJLw",
+  LEAD_DEMO_BOOK: "1ziQQuxXRYNmE65iQmwnPfqvz-njMZK2-zxVH6v6c0CI"
 };
 
 /**
@@ -20,12 +21,13 @@ var SPREADSHEET_IDS = {
  * Returns JSON containing data from the requested tabs or all tabs.
  *
  * Query Parameters:
- *   - ?action=all (Default: returns all 5 datasets)
+ *   - ?action=all (Default: returns all datasets)
  *   - ?action=teachers
  *   - ?action=availability
  *   - ?action=subjects
  *   - ?action=teacher_assign
  *   - ?action=class_master
+ *   - ?action=demo_book
  */
 function doGet(e) {
   try {
@@ -76,6 +78,25 @@ function doGet(e) {
       }
       if (action === "all" || action === "class_master") {
         result.classMaster = getSheetData(classSs, "Class Master");
+      }
+    }
+
+    if (action === "all" || action === "demobook" || action === "demo_book" || action === "lead_demo_book" || action === "leads") {
+      try {
+        var demoSs = SpreadsheetApp.openById(SPREADSHEET_IDS.LEAD_DEMO_BOOK);
+        var demoSheet = findSheetCaseInsensitive(demoSs, [
+          "Demo book",
+          "Demo Book",
+          "lead_demo_book",
+          "Lead & Demo Book",
+          "DemoBook",
+          "Demobook",
+          "Leads"
+        ]);
+        result.demoBook = demoSheet ? getSheetData(demoSs, demoSheet.getName()) : [];
+      } catch (demoErr) {
+        result.demoBookError = demoErr.toString();
+        result.demoBook = [];
       }
     }
 

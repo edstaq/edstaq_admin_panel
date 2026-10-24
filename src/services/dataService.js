@@ -918,7 +918,7 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
   let maxDemoDate = null;
 
   demoBook.forEach((d, idx) => {
-    const subId = (d['Subject ID'] || '').trim();
+    const subId = (d['Subject ID'] || d['Subject Id'] || d['subject id'] || '').trim();
     const sub = subjectMap.get(subId) || {
       id: subId,
       name: 'Unknown Subject',
@@ -929,8 +929,8 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
       label: subId
     };
 
-    const status = (d['Demo Status'] || 'Unknown').trim();
-    const teacherId = (d['Teacher ID'] || '').trim();
+    const status = (d['Demo Status'] || d['Demo status'] || d['Status'] || 'Unknown').trim();
+    const teacherId = (d['Teacher ID'] || d['Teacher Id'] || d['teacher id'] || '').trim();
     const isTeacherMissing = !teacherId;
     const isUrgentPending = isTeacherMissing && (status === 'Scheduled' || status === 'Follow up');
     const isLostNoTeacher = isTeacherMissing && status === 'Rejected';
@@ -943,7 +943,7 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
     else if (status === 'Completed') totalCompletedCount++;
     else if (status === 'Follow up') totalFollowupCount++;
 
-    const rawDateStr = (d['Slot Date'] || d['Date'] || '').trim();
+    const rawDateStr = (d['Slot Date'] || d['Slot date'] || d['Date'] || d['date'] || '').trim();
     const parsedDate = parseDemoDate(rawDateStr);
     if (parsedDate && !isNaN(parsedDate.getTime())) {
       if (!maxDemoDate || parsedDate > maxDemoDate) {
@@ -952,9 +952,9 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
     }
 
     processedDemos.push({
-      demoId: d['Demo ID'] || `DMO_${idx}`,
-      studentName: d['Student Name'] || 'Anonymous',
-      phone: d['Phone Number'] || '',
+      demoId: d['Demo ID'] || d['Demo Id'] || `DMO_${idx}`,
+      studentName: d['Student Name'] || d['Student name'] || 'Anonymous',
+      phone: d['Phone Number'] || d['Phone number'] || '',
       subjectId: subId,
       subjectName: sub.name,
       stage: sub.stage,

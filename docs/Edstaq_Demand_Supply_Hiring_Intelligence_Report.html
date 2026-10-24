@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edstaq - Demand Analysis, Supply Modeling & Hiring Intelligence Specification</title>
+  <style>
+    @page {
+      margin: 1.8cm 1.5cm;
+      size: A4 portrait;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      line-height: 1.6;
+      font-size: 13px;
+      margin: 0;
+      padding: 20px;
+    }
+    .header-banner {
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    .brand-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #2563eb;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 22px;
+      color: #1e3a8a;
+      margin: 6px 0 4px 0;
+      font-weight: 800;
+    }
+    .subtitle {
+      font-size: 12px;
+      color: #475569;
+      margin: 0;
+    }
+    h2 {
+      font-size: 16px;
+      color: #1e3a8a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 14px;
+      color: #0f172a;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      color: #334155;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 20px 0;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+    .badge-critical { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+    .badge-high { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .badge-moderate { background: #e0f2fe; color: #075985; border: 1px solid #bae6fd; }
+    .card-box {
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2563eb;
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 14px 0;
+    }
+    .formula-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-family: Consolas, monospace;
+      font-size: 11.5px;
+      margin: 10px 0;
+    }
+    .text-center { text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div class="header-banner">
+    <div class="brand-title">Edstaq Academy Management Portal</div>
+    <h1>Demand Analysis, Supply Modeling & Hiring Intelligence Specification</h1>
+    <div class="subtitle">Complete Master Report: Inbound Demand Audit, Teacher Supply Cannibalization, and 4-Pillar Recruitment Engine</div>
+  </div>
+
+  <h2>1. Allocation Feature Removal Documentation</h2>
+  <p>As confirmed by academic operations, manual/new class allocation from the teacher table and timetable matrix was deemed redundant and has been completely decommissioned across the admin codebase:</p>
+  <ul>
+    <li><strong>Teachers Overview Table (<code>TeachersTable.jsx</code>):</strong> Removed the 'Allocate' button from each teacher's row action cell. Only the Declines log modal remains accessible.</li>
+    <li><strong>Schedule Matrix Modal (<code>ScheduleMatrixModal.jsx</code>):</strong> Removed the 'New Allocation' header action button, preserving pure timetable and availability viewing.</li>
+    <li><strong>Application Core (<code>App.jsx</code>):</strong> Removed <code>TeacherAssignModal</code> imports, state references, allocation triggers, and local optimistic storage dependencies.</li>
+  </ul>
+
+  <h2>2. Lead & Demo Book: Inbound Student Demand Analysis</h2>
+  <p>Analysis of <strong>149 student demo records</strong> against the Master Subjects catalog reveals current demand velocity and enrollment bottlenecks:</p>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Demo Status</th>
+        <th class="text-center">Count</th>
+        <th class="text-center">Percentage</th>
+        <th>Strategic Significance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Converted to Sale</strong></td>
+        <td class="text-center">38</td>
+        <td class="text-center">25.5%</td>
+        <td>Closed revenue admissions</td>
+      </tr>
+      <tr>
+        <td><strong>Rejected</strong></td>
+        <td class="text-center">74</td>
+        <td class="text-center">49.7%</td>
+        <td>Price sensitivity, schedule clashes, or decision-maker drop-offs</td>
+      </tr>
+      <tr>
+        <td><strong>Scheduled (Upcoming)</strong></td>
+        <td class="text-center">18</td>
+        <td class="text-center">12.1%</td>
+        <td>Active pipeline awaiting demo session</td>
+      </tr>
+      <tr>
+        <td><strong>Completed</strong></td>
+        <td class="text-center">13</td>
+        <td class="text-center">8.7%</td>
+        <td>Demo finished, pending final closing call</td>
+      </tr>
+      <tr>
+        <td><strong>Follow up</strong></td>
+        <td class="text-center">6</td>
+        <td class="text-center">4.0%</td>
+        <td>Interested leads scheduled for re-contact</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>2.1 Division / Level Demand Breakdown</h3>
+  <ul>
+    <li><strong>Class 8:</strong> #1 single grade in demand (<strong>25 demos</strong>, 35.3% conversion rate).</li>
+    <li><strong>Class 4:</strong> 18 demos, but 0 conversions due to price sensitivity.</li>
+    <li><strong>Class 7:</strong> 16 demos (25.0% conversion rate).</li>
+    <li><strong>Class 3:</strong> 16 demos (45.5% conversion rate).</li>
+    <li><strong>Class 6:</strong> 14 demos (33.3% conversion rate).</li>
+    <li><strong>Class 9:</strong> 12 demos (High dropout in Maths/Hindi).</li>
+    <li><strong>Higher Secondary (HSS: Plus 1 & Plus 2):</strong> 10 requests with an extraordinary <strong>75.0% conversion rate</strong>. High willingness to pay for commerce and science tuitions.</li>
+  </ul>
+
+  <h3>2.2 Core Subject Demand Breakdown</h3>
+  <ul>
+    <li><strong>Mathematics:</strong> 48 requests (32.2% of total demand). High volume across all grades.</li>
+    <li><strong>English:</strong> 39 requests (26.2% of total demand).</li>
+    <li><strong>Hindi:</strong> 22 requests (14.8% of total demand). Acute teacher shortage in CBSE Class 7 and Kerala Class 9.</li>
+    <li><strong>Malayalam:</strong> 13 requests (8.7% of total demand).</li>
+  </ul>
+
+  <h3>2.3 Qualitative Rejection Root-Cause Breakdown</h3>
+  <div class="card-box">
+    <ul>
+      <li><strong>Pricing / Affordability (~45%):</strong> Parents praise tutor quality, but struggle with 1-on-1 monthly fees. Multiple notes indicate demand for lower-priced group formats.</li>
+      <li><strong>Decision-Maker Gap (~25%):</strong> Demos attended only by student/mother where financial decision-making lies with the father.</li>
+      <li><strong>School Exam / Calendar Clashes (~15%):</strong> Temporary pauses due to USS examinations, Madrasa exam cycles, or school Kalolsavam.</li>
+      <li><strong>Alternative Preferences (~15%):</strong> Offline home tuition enquiries or coaching centers.</li>
+    </ul>
+  </div>
+
+  <h2>3. The 4-Pillar Hiring Requirement Profile & Mathematical Model</h2>
+  <p>As specified by Edstaq academic management, teacher recruitment must be qualified across four core parameters:</p>
+  <ul>
+    <li><strong>1. Target Subject:</strong> Mathematics, English, Hindi, Basic Science, Physics, Chemistry, Accountancy.</li>
+    <li><strong>2. Division / Stage:</strong> Lower Primary (LP: 1-4), Upper Primary (UP: 5-7), High School (HS: 8-10), Higher Secondary (HSS: +1/+2).</li>
+    <li><strong>3. Curriculum / Board:</strong> Kerala State Syllabus vs. CBSE Syllabus (or Dual-Board competency).</li>
+    <li><strong>4. Teaching Language / Medium:</strong> English Medium, Malayalam Medium, or Bilingual / Mixed Delivery.</li>
+  </ul>
+
+  <h3>3.1 Mathematical Engine</h3>
+  <div class="formula-box">
+    H_required = max(0, ceil((Demand_hours - Supply_hours) / Standard_Capacity_per_Teacher))<br>
+    If Demand >= 2 and Current_Active_Teachers = 0: H_required = max(1, ceil(Demand * 0.5))
+  </div>
+
+  <h3>3.2 Dynamic Reserve / Buffer Pool (B_reserve)</h3>
+  <p>To absorb future trend spikes once Supply = Demand, a reserve buffer is maintained by level:</p>
+  <ul>
+    <li><strong>Higher Secondary (+1/+2):</strong> 50% buffer (High conversion value ~75%)</li>
+    <li><strong>High School (Classes 8-10):</strong> 40% buffer (Board exam volume)</li>
+    <li><strong>Upper Primary (Classes 5-7):</strong> 30% buffer</li>
+    <li><strong>Lower Primary (Classes 1-4):</strong> 25% buffer</li>
+  </ul>
+
+  <h3>3.3 Urgent Priority Hiring Action Matrix</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Priority</th>
+        <th>Subject & Curriculum Profile</th>
+        <th class="text-center">Active Supply</th>
+        <th class="text-center">Immediate Hires</th>
+        <th class="text-center">Buffer Pool</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-critical">🚨 P1 (Critical)</span></td>
+        <td><strong>Class 10 - MATHS CBSE (SUB318)</strong><br><small>Board: CBSE | Language: English & Mixed</small></td>
+        <td class="text-center">0 Teachers</td>
+        <td class="text-center"><strong>2 Hires</strong></td>
+        <td class="text-center">+1 Reserve</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-critical">🚨 P2 (Critical)</span></td>
+        <td><strong>Class 7 - HINDI CBSE (SUB239)</strong><br><small>Board: CBSE | Language: English & Mixed</small></td>
+        <td class="text-center">0 Teachers</td>
+        <td class="text-center"><strong>2 Hires</strong></td>
+        <td class="text-center">+1 Reserve</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">🚨 P3 (High)</span></td>
+        <td><strong>Class 9 - HINDI Kerala (SUB296)</strong><br><small>Board: Kerala | Language: Mixed / Malayalam</small></td>
+        <td class="text-center">0 Teachers</td>
+        <td class="text-center"><strong>1 Hire</strong></td>
+        <td class="text-center">+1 Reserve</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">⚠️ P4 (High)</span></td>
+        <td><strong>Class 8 - MATHS Kerala (SUB275 & SUB283)</strong><br><small>Board: Kerala | Language: Malayalam & English</small></td>
+        <td class="text-center">2 (Overbooked)</td>
+        <td class="text-center"><strong>3 Hires</strong></td>
+        <td class="text-center">+1 Reserve</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">⚠️ P5 (High)</span></td>
+        <td><strong>Plus 1 - COMMERCE & SCIENCE (+1)</strong><br><small>Board: Kerala/CBSE | Language: English</small></td>
+        <td class="text-center">1 Teacher</td>
+        <td class="text-center"><strong>2 Hires</strong></td>
+        <td class="text-center">+1 Reserve</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. The 'Phantom Supply' Dilemma & Cluster-Based Anti-Cannibalization</h2>
+  <div class="card-box">
+    <h3>The Maneesha Case Study: Understanding Shared Resource Strain</h3>
+    <p>Consider teacher Maneesha on the roster:<br>
+    • Maneesha is qualified to teach Mathematics for Classes 5 to 10 (6 classes).<br>
+    • She teaches both Kerala Syllabus and CBSE Syllabus (6 × 2 = 12 total subject combinations).<br>
+    • However, Maneesha has only 3 sessions of available time per week.<br><br>
+    If one student books Maneesha for 3 sessions/week in Class 10 CBSE Maths, Maneesha's capacity immediately drops to ZERO. Consequently, all other 11 combinations instantly lose their teacher supply!<br><br>
+    A naive system that looks at each subject individually creates a false sense of security (Phantom Supply). In reality, 1 teacher with 3 sessions can only service 1 student.</p>
+  </div>
+
+  <h3>Session-Weighted Cluster Pooling Solution</h3>
+  <ul>
+    <li><strong>Nominal Headcount vs True Available Session Capacity:</strong> Distinguishing on-paper qualification from actual unbooked time slots in peak student hours (17:00-22:00).</li>
+    <li><strong>Cross-Subject Cannibalization Factor (&kappa;):</strong> &kappa; = Total_Qualified_Combinations / Available_Weekly_Sessions. When &kappa; > 1.5, the resource is flagged as 'Hyper-Shared / High Strain'.</li>
+    <li><strong>Competency Cluster Aggregation:</strong> Instead of calculating Class 5, 6, 7 in silos, demand and supply are pooled by domain (e.g., 'High School Mathematics Cluster'). Hiring targets recommend versatile teachers capable of covering the cluster pool.</li>
+    <li><strong>UI Strain Indicators:</strong> Subject rows display a '⚠️ Shared Capacity (Stretched across N subjects)' badge to alert academic coordinators.</li>
+  </ul>
+
+  <h2>5. UI Implementation & Navigation Architecture</h2>
+  <ul>
+    <li><strong>Navigation Switcher:</strong> The top module dropdown ('Tutor Availability') in <code>Header.jsx</code> includes 'Supply vs Demand & Hiring Intel', switching views seamlessly.</li>
+    <li><strong>KPI Summary Cards:</strong> Active Demand, Teacher Pool, Critical Deficits, Immediate Hires Needed, and Reserve Pool.</li>
+    <li><strong>4-Way Multi-Faceted Filter:</strong> Division (LP/UP/HS/HSS), Board (Kerala/CBSE), Medium (English/Malayalam/Mixed), and Urgency Level.</li>
+    <li><strong>Urgent Action Priority List:</strong> Highlighted cards for immediate HR recruitment postings.</li>
+    <li><strong>Interactive Matrix Table:</strong> Full searchable breakdown with one-click 'Export HR Hiring Plan'.</li>
+  </ul>
+
+</body>
+</html>

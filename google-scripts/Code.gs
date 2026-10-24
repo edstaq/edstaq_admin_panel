@@ -81,18 +81,16 @@ function doGet(e) {
       }
     }
 
-    if (action === "all" || action === "demobook" || action === "demo_book" || action === "lead_demo_book" || action === "leads") {
+    if (action === "all" || action === "demobook" || action === "demo_book" || action === "lead_demo_book") {
       try {
         var demoSs = SpreadsheetApp.openById(SPREADSHEET_IDS.LEAD_DEMO_BOOK);
         var demoSheet = findSheetCaseInsensitive(demoSs, [
           "Demo book",
           "Demo Book",
           "lead_demo_book",
-          "Lead & Demo Book",
           "DemoBook",
-          "Demobook",
-          "Leads"
-        ]);
+          "Demobook"
+        ], "1332535842");
         result.demoBook = demoSheet ? getSheetData(demoSs, demoSheet.getName()) : [];
       } catch (demoErr) {
         result.demoBookError = demoErr.toString();
@@ -152,15 +150,26 @@ function getSheetData(spreadsheet, sheetName) {
 }
 
 /**
- * Helper function to find a sheet matching any of the candidate names case-insensitively with trimmed whitespace
+ * Helper function to find a sheet matching candidate names case-insensitively,
+ * prioritizing exact GID match if specified, then by candidate order.
  */
-function findSheetCaseInsensitive(spreadsheet, possibleNames) {
+function findSheetCaseInsensitive(spreadsheet, possibleNames, targetGid) {
   var sheets = spreadsheet.getSheets();
-  var normalizedPossibles = possibleNames.map(function(n) { return n.toLowerCase().trim(); });
-  for (var i = 0; i < sheets.length; i++) {
-    var name = sheets[i].getName().toLowerCase().trim();
-    if (normalizedPossibles.indexOf(name) !== -1) {
-      return sheets[i];
+  if (targetGid) {
+    for (var g = 0; g < sheets.length; g++) {
+      if (String(sheets[g].getSheetId()) === String(targetGid)) {
+        return sheets[g];
+      }
+    }
+  }
+
+  for (var p = 0; p < possibleNames.length; p++) {
+    var target = possibleNames[p].toLowerCase().trim();
+    for (var i = 0; i < sheets.length; i++) {
+      var name = sheets[i].getName().toLowerCase().trim();
+      if (name === target) {
+        return sheets[i];
+      }
     }
   }
   return null;

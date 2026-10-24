@@ -19,8 +19,9 @@ export default function App() {
   const [rawData, setRawData] = useState(null);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
-  const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxiWHvLqSj9_mxStlaLoik9r1c_SEpBVQUUbd-fHWtEneeSBsvka-6NRnOVRcCNCDFg/exec';
+  const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwfs_yCOYTpmTjLR0KKPCvhsPBu3YIK8Hm5BpjOeYCNfz-id24Sek5r_jQfI32EC52J/exec';
   const OLD_SCRIPT_URLS = [
+    'https://script.google.com/macros/s/AKfycbxiWHvLqSj9_mxStlaLoik9r1c_SEpBVQUUbd-fHWtEneeSBsvka-6NRnOVRcCNCDFg/exec',
     'https://script.google.com/macros/s/AKfycbw5FFrD4aeR2przgNwvWqDlzSIch-La9Zl22d-kXHrB5-meroec0kepzBt9zZz9TMqJ/exec',
     'https://script.google.com/macros/s/AKfycbzhoidGQuaiv9suKWubVXSUlsg9pd3RtMFvF2zjaDhAzkszgohurI4t0h9PRQ4ORDiy/exec'
   ];

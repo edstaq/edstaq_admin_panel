@@ -34,7 +34,7 @@ export async function fetchCsv(url) {
   });
 }
 
-export const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwfs_yCOYTpmTjLR0KKPCvhsPBu3YIK8Hm5BpjOeYCNfz-id24Sek5r_jQfI32EC52J/exec';
+export const DEFAULT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx-QqRYPh966rpalF2stGOLscBMOJwOyT-MrBgwNQd8HtIS5vpDKw46ZkDTSTuyZb8/exec';
 
 /**
  * Computes average ratings per session and overall teacher rating from review logs.

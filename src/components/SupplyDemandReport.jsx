@@ -37,6 +37,7 @@ import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import Papa from 'papaparse';
 import { parseDemoDate } from '../services/dataService';
+import { formatDuration } from '../utils/timeUtils';
 
 export const LEVEL_CLASS_MAP = {
   'LP': ['Class 1', 'Class 2', 'Class 3', 'Class 4'],
@@ -396,6 +397,8 @@ export default function SupplyDemandReport({
 
   // 4. "Show Shortage Only" Toggle (Audio 3: Default is ON - true)
   const [showShortageOnly, setShowShortageOnly] = useState(true);
+  // 4b. "Show Vacant Only" Toggle
+  const [showVacantOnly, setShowVacantOnly] = useState(false);
 
   // 5. Subject Search Query
   const [searchQuery, setSearchQuery] = useState('');
@@ -454,7 +457,7 @@ export default function SupplyDemandReport({
     );
   }
 
-  const { kpis, processedDemos = [], detailedRows = [] } = analyticsData;
+  const { kpis, processedDemos = [], detailedRows = [], activeHoldAllocations = [] } = analyticsData;
 
   // Active Filter Count for Reset
   const activeSecondaryFilterCount = (boardFilter ? 1 : 0) + 
@@ -463,6 +466,7 @@ export default function SupplyDemandReport({
                                      (forecastPeriod !== 'all' ? 1 : 0) + 
                                      (searchQuery ? 1 : 0) + 
                                      (showShortageOnly ? 1 : 0) +
+                                     (showVacantOnly ? 1 : 0) +
                                      (backupPercentage !== 10 ? 1 : 0);
 
   const handleResetFilters = () => {
@@ -472,6 +476,7 @@ export default function SupplyDemandReport({
     setForecastPeriod('all');
     setSearchQuery('');
     setShowShortageOnly(false);
+    setShowVacantOnly(false);
     setBackupPercentage(10);
   };
 
@@ -584,11 +589,15 @@ export default function SupplyDemandReport({
     }
   }, [maxDemoDate, forecastPeriod]);
 
-  // Filter processedDemos by Forecast Lookback and Secondary Cross-Filters
+  // Base Demand Dataset: If 'current_active_hold' is chosen, evaluate Teacher Assign (Active & HOLD allocations), otherwise use Demo inquiries
+  const isCurrentActiveHold = forecastPeriod === 'current_active_hold';
+  const baseDemandList = isCurrentActiveHold ? activeHoldAllocations : processedDemos;
+
+  // Filter demand by Forecast Lookback and Secondary Cross-Filters
   const filteredDemos = useMemo(() => {
-    return processedDemos.filter(d => {
-      // 1. Forecast lookback check (Audio 4: Demand changes based on lookback, supply is fixed)
-      if (lookbackStartDate) {
+    return baseDemandList.filter(d => {
+      // 1. Forecast lookback check (Only for demo forecasts, not for current allocations)
+      if (!isCurrentActiveHold && lookbackStartDate) {
         const pDate = d.parsedDate ? new Date(d.parsedDate) : parseDemoDate(d.slotDate);
         if (pDate && pDate < lookbackStartDate) return false;
       }
@@ -598,14 +607,16 @@ export default function SupplyDemandReport({
       if (classFilter && d.stage !== classFilter) return false;
       return true;
     });
-  }, [processedDemos, lookbackStartDate, boardFilter, levelFilter, classFilter]);
+  }, [baseDemandList, isCurrentActiveHold, lookbackStartDate, boardFilter, levelFilter, classFilter]);
 
   // Dynamic KPIs reflecting the current forecast lookback and cross-filters
   const dynamicKpis = useMemo(() => {
     const totalD = filteredDemos.length;
     const urgentNoTeacher = filteredDemos.filter(d => d.isUrgentPending).length;
     const lostNoTeacher = filteredDemos.filter(d => d.isLostNoTeacher).length;
-    const converted = filteredDemos.filter(d => d.status === 'Converted to Sale').length;
+    const converted = isCurrentActiveHold
+      ? filteredDemos.filter(d => d.status === 'Active').length
+      : filteredDemos.filter(d => d.status === 'Converted to Sale').length;
     const conversionRate = totalD > 0 ? Number(((converted / totalD) * 100).toFixed(1)) : 0;
     return {
       totalDemos: totalD,
@@ -614,10 +625,10 @@ export default function SupplyDemandReport({
       totalConverted: converted,
       conversionRate
     };
-  }, [filteredDemos]);
+  }, [filteredDemos, isCurrentActiveHold]);
 
   // Build the Pivot Matrix: Demand (demo requests) vs Supply (count of qualified teachers with available slots)
-  const { pivotRows, columnTotals, grandTotal, totalShortageSubjectCount } = useMemo(() => {
+  const { pivotRows, columnTotals, grandTotal, totalShortageSubjectCount, totalVacantSubjectCount } = useMemo(() => {
     const subjectMap = new Map();
 
     // From filtered demos
@@ -659,6 +670,7 @@ export default function SupplyDemandReport({
 
     const colKeys = columnDefs.map(c => c.key);
     let shortageSubjectCount = 0;
+    let vacantSubjectCount = 0;
 
     const rows = Array.from(subjectMap.values()).map(sub => {
       const cells = {};
@@ -667,6 +679,7 @@ export default function SupplyDemandReport({
       let rowTotalShortage = 0;
       let rowTotalUrgentNoTeacher = 0;
       let hasAnyShortage = false;
+      let hasAnyVacant = false;
 
       colKeys.forEach(colKey => {
         // Demand: count of demo requests in this intersection
@@ -704,12 +717,16 @@ export default function SupplyDemandReport({
         const targetRequiredSupply = demand + backupRequired;
         const directShortage = demand > teacherSupply ? (demand - teacherSupply) : 0;
         const isShortage = (teacherSupply < targetRequiredSupply) || (urgentNoTeacher > 0);
+        const isVacant = teacherSupply > 0 && !isShortage;
         const shortageValue = targetRequiredSupply > teacherSupply ? (targetRequiredSupply - teacherSupply) : 0;
         const bufferValue = teacherSupply >= targetRequiredSupply ? (teacherSupply - targetRequiredSupply) : 0;
 
         if (isShortage) {
           hasAnyShortage = true;
           rowTotalShortage += shortageValue;
+        }
+        if (isVacant) {
+          hasAnyVacant = true;
         }
 
         rowTotalDemand += demand;
@@ -754,6 +771,10 @@ export default function SupplyDemandReport({
           return !hasTeacher;
         });
 
+        const cellRemainingMinutes = qualifiedTeachersList.reduce((acc, qt) => acc + (qt.remainingMinutes || 0), 0);
+        const cellPossibleSessions = qualifiedTeachersList.reduce((acc, qt) => acc + (qt.possibleSessions || 0), 0);
+        const cellRemainingSlotsCount = qualifiedTeachersList.reduce((acc, qt) => acc + (qt.remainingSlotsCount || 0), 0);
+
         cells[colKey] = {
           colKey,
           colLabel: columnDefs.find(c => c.key === colKey)?.label || colKey,
@@ -764,6 +785,9 @@ export default function SupplyDemandReport({
           classFilter,
           demand,
           supply: teacherSupply,
+          remainingMinutes: cellRemainingMinutes,
+          possibleSessions: cellPossibleSessions,
+          remainingSlotsCount: cellRemainingSlotsCount,
           backupRequired,
           backupPercentage,
           targetRequiredSupply,
@@ -771,6 +795,7 @@ export default function SupplyDemandReport({
           shortage: shortageValue,
           buffer: bufferValue,
           isShortage,
+          isVacant,
           urgentNoTeacher,
           teachersCount: teacherSupply,
           qualifiedTeachers: qualifiedTeachersList,
@@ -779,10 +804,6 @@ export default function SupplyDemandReport({
           zeroSupplySubjects
         };
       });
-
-      if (hasAnyShortage) {
-        shortageSubjectCount++;
-      }
 
       // Row-level teachers, demos and subject breakdown
       const rowQualifiedTeachersMap = new Map();
@@ -839,6 +860,13 @@ export default function SupplyDemandReport({
       const rowTotalBufferVal = rowTeacherSupply >= rowTargetRequiredSupply ? (rowTeacherSupply - rowTargetRequiredSupply) : 0;
       const rowIsShortage = (rowTeacherSupply < rowTargetRequiredSupply) || (rowTotalUrgentNoTeacher > 0);
 
+      if (hasAnyShortage) {
+        shortageSubjectCount++;
+      }
+      if (hasAnyVacant || (rowTeacherSupply > 0 && !rowIsShortage)) {
+        vacantSubjectCount++;
+      }
+
       const totalCellData = {
         colKey: 'TOTAL_ROW',
         colLabel: 'All Classes/Levels (Row Total)',
@@ -871,6 +899,7 @@ export default function SupplyDemandReport({
         rowTotalBuffer: rowTotalBufferVal,
         rowTotalUrgentNoTeacher,
         hasAnyShortage,
+        hasAnyVacant,
         totalCellData
       };
     });
@@ -1078,26 +1107,31 @@ export default function SupplyDemandReport({
           isGrandTotal: true
         }
       },
-      totalShortageSubjectCount: shortageSubjectCount
+      totalShortageSubjectCount: shortageSubjectCount,
+      totalVacantSubjectCount: vacantSubjectCount
     };
   }, [filteredDemos, columnDimension, columnDefs, detailedRows, boardFilter, levelFilter, classFilter, backupPercentage]);
 
-  // Filtered Rows by "Show Shortage Only" and "Subject Search"
+  // Filtered Rows by "Show Shortage Only", "Show Vacant Only" and "Subject Search"
   const displayRows = useMemo(() => {
     return pivotRows.filter(r => {
       if (showShortageOnly && !r.hasAnyShortage) return false;
+      if (showVacantOnly && !r.hasAnyVacant && !(r.rowTotalSupply > 0 && r.rowTotalShortage === 0)) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         if (!r.subjectName.toLowerCase().includes(q)) return false;
       }
       return true;
     }).sort((a, b) => {
+      if (showVacantOnly) {
+        return b.rowTotalBuffer - a.rowTotalBuffer || b.rowTotalSupply - a.rowTotalSupply;
+      }
       // Prioritize subjects with shortages, then highest total demand
       if (a.hasAnyShortage && !b.hasAnyShortage) return -1;
       if (!a.hasAnyShortage && b.hasAnyShortage) return 1;
       return b.rowTotalDemand - a.rowTotalDemand;
     });
-  }, [pivotRows, showShortageOnly, searchQuery]);
+  }, [pivotRows, showShortageOnly, showVacantOnly, searchQuery]);
 
   // Helper to extract matching subjects for a teacher under the clicked cell scope (Audio 2 & 3)
   const getTeacherMatchingSubjects = (qt, cell) => {
@@ -1195,6 +1229,10 @@ export default function SupplyDemandReport({
             shortLabel: col.shortLabel,
             demand: cell.demand,
             supply: cell.supply,
+            remainingMinutes: cell.remainingMinutes || 0,
+            possibleSessions: cell.possibleSessions || 0,
+            remainingSlotsCount: cell.remainingSlotsCount || 0,
+            formattedRemaining: formatDuration(cell.remainingMinutes || 0),
             backupRequired: cell.backupRequired || 0,
             backupPercentage: cell.backupPercentage || backupPercentage,
             targetRequiredSupply: cell.targetRequiredSupply || (cell.demand + (cell.backupRequired || 0)),
@@ -1202,6 +1240,7 @@ export default function SupplyDemandReport({
             shortage: cell.shortage,
             buffer: cell.buffer,
             isShortage: cell.isShortage,
+            isVacant: cell.isVacant ?? (cell.supply > 0 && !cell.isShortage),
             urgentNoTeacher: cell.urgentNoTeacher,
             priority: itemPriority,
             priorityScore: itemPriority.score,
@@ -1216,6 +1255,7 @@ export default function SupplyDemandReport({
   const filteredUnpivotedList = useMemo(() => {
     let result = unpivotedList.filter(item => {
       if (showShortageOnly && !item.isShortage) return false;
+      if (showVacantOnly && (!item.isVacant || item.isShortage)) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         if (!item.subjectName.toLowerCase().includes(q) && !item.dimensionLabel.toLowerCase().includes(q)) {
@@ -1228,9 +1268,18 @@ export default function SupplyDemandReport({
     result.sort((a, b) => {
       let valA = a[listSortKey];
       let valB = b[listSortKey];
+      if (listSortKey === 'remaining') {
+        valA = a.possibleSessions || a.remainingMinutes || 0;
+        valB = b.possibleSessions || b.remainingMinutes || 0;
+      }
       if (listSortKey === 'priority') {
-        valA = a.priorityScore || 0;
-        valB = b.priorityScore || 0;
+        if (showVacantOnly) {
+          valA = a.possibleSessions || a.buffer || a.supply || 0;
+          valB = b.possibleSessions || b.buffer || b.supply || 0;
+        } else {
+          valA = a.priorityScore || 0;
+          valB = b.priorityScore || 0;
+        }
       }
       if (listSortKey === 'shortage') {
         valA = a.isShortage ? a.shortage : -a.buffer;
@@ -1250,7 +1299,7 @@ export default function SupplyDemandReport({
     });
 
     return result;
-  }, [unpivotedList, showShortageOnly, searchQuery, listSortKey, listSortDirection]);
+  }, [unpivotedList, showShortageOnly, showVacantOnly, searchQuery, listSortKey, listSortDirection]);
 
   const dimensionHeaderLabel = columnDimension === 'class' ? 'Class' : 
                                columnDimension === 'level' ? 'Level' : 
@@ -1414,6 +1463,12 @@ export default function SupplyDemandReport({
         'Boards': boardsStr,
         'Levels': levelsKey,
         'Departments': departmentsStr,
+        'Remaining Free & Sessions': item.possibleSessions > 0
+          ? `${item.possibleSessions} Sess. Poss. (${item.remainingSlotsCount || 0} slots open, ${formatDuration(item.remainingMinutes || 0)})`
+          : (item.remainingMinutes > 0 ? `${formatDuration(item.remainingMinutes || 0)} (${item.remainingSlotsCount || 0} slots open)` : 'No Free Slots'),
+        'Remaining Free Time': formatDuration(item.remainingMinutes || 0),
+        'Possible Bookable Sessions': item.possibleSessions || 0,
+        'Remaining Slots Open': item.remainingSlotsCount || 0,
         'Hiring Priority': hiringPriority,
         'Demand': demandVal,
         'Supply': supplyVal,
@@ -1444,6 +1499,10 @@ export default function SupplyDemandReport({
         { wch: 16 }, // Boards
         { wch: 10 }, // Levels
         { wch: 14 }, // Departments
+        { wch: 30 }, // Remaining Free & Sessions
+        { wch: 18 }, // Remaining Free Time
+        { wch: 16 }, // Possible Bookable Sessions
+        { wch: 16 }, // Remaining Slots Open
         { wch: 16 }, // Hiring Priority
         { wch: 10 }, // Demand
         { wch: 10 }, // Supply
@@ -1557,15 +1616,19 @@ export default function SupplyDemandReport({
             <TrendingUp size={22} />
           </div>
           <div className="metric-info">
-            <span className="metric-label">Demo Book Inquiries</span>
+            <span className="metric-label">
+              {isCurrentActiveHold ? 'Current Allocations Demand' : 'Demo Book Inquiries'}
+            </span>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem' }}>
               <span className="metric-value">{dynamicKpis.totalDemos}</span>
               <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#16a34a' }}>
-                ({dynamicKpis.conversionRate}% closed)
+                ({isCurrentActiveHold ? `${dynamicKpis.totalConverted} Active` : `${dynamicKpis.conversionRate}% closed`})
               </span>
             </div>
             <span className="metric-sub">
-              {dynamicKpis.totalConverted} Converted • {forecastPeriod !== 'all' ? 'Window Demos' : `${kpis.totalScheduled} Scheduled`}
+              {isCurrentActiveHold
+                ? `${dynamicKpis.totalConverted} Active • ${dynamicKpis.totalDemos - dynamicKpis.totalConverted} on HOLD`
+                : `${dynamicKpis.totalConverted} Converted • ${forecastPeriod !== 'all' ? 'Window Demos' : `${kpis.totalScheduled} Scheduled`}`}
             </span>
           </div>
         </div>
@@ -1645,8 +1708,9 @@ export default function SupplyDemandReport({
               value={forecastPeriod}
               onChange={e => setForecastPeriod(e.target.value)}
               className="forecast-period-select"
-              title="Select forecast lookback period for demand"
+              title="Select forecast lookback period for demand or current allocations"
             >
+              <option value="current_active_hold">📌 Current (Active &amp; HOLD Allocations)</option>
               <option value="all">Lifetime (All Inquiries)</option>
               <option value="1_month">Next 1 Month (Past 30d Demand)</option>
               <option value="2_months">Next 2 Months (Past 60d Demand)</option>
@@ -1773,12 +1837,36 @@ export default function SupplyDemandReport({
             <button
               type="button"
               className={`shortage-badge-btn ${showShortageOnly ? 'active' : ''}`}
-              onClick={() => setShowShortageOnly(prev => !prev)}
+              onClick={() => {
+                setShowShortageOnly(prev => {
+                  const next = !prev;
+                  if (next) setShowVacantOnly(false);
+                  return next;
+                });
+              }}
               title={showShortageOnly ? 'Click to show all subjects' : 'Filter to only subjects with a teacher shortage'}
             >
               <AlertCircle size={15} className={showShortageOnly ? 'spin-slow' : ''} />
               <span>{showShortageOnly ? 'Showing Shortage Only' : 'Show Shortage Only'}</span>
               <span className="shortage-badge-counter">{totalShortageSubjectCount}</span>
+            </button>
+
+            {/* Vacant Toggle Button */}
+            <button
+              type="button"
+              className={`vacant-badge-btn ${showVacantOnly ? 'active' : ''}`}
+              onClick={() => {
+                setShowVacantOnly(prev => {
+                  const next = !prev;
+                  if (next) setShowShortageOnly(false);
+                  return next;
+                });
+              }}
+              title={showVacantOnly ? 'Click to show all subjects' : 'Filter to only subjects with vacant / available teachers'}
+            >
+              <CheckCircle2 size={15} />
+              <span>{showVacantOnly ? 'Showing Vacant Only' : 'Show Vacant Only'}</span>
+              <span className="vacant-badge-counter">{totalVacantSubjectCount}</span>
             </button>
           </div>
 
@@ -2324,6 +2412,14 @@ export default function SupplyDemandReport({
                       </span>
                     </div>
                   </th>
+                  <th className={`sortable-th ${listSortKey === 'remaining' ? 'active-sort' : ''}`} onClick={() => handleListSort('remaining')} style={{ minWidth: '165px' }}>
+                    <div className="th-sort-wrapper">
+                      <span>Remaining Free &amp; Sessions</span>
+                      <span className="sort-icon-box">
+                        {listSortKey === 'remaining' ? (listSortDirection === 'asc' ? <ArrowUp size={13} /> : <ArrowDown size={13} />) : <ArrowUpDown size={12} className="idle" />}
+                      </span>
+                    </div>
+                  </th>
                   <th className={`sortable-th ${listSortKey === 'priority' ? 'active-sort' : ''}`} onClick={() => handleListSort('priority')} style={{ textAlign: 'center', minWidth: '135px' }}>
                     <div className="th-sort-wrapper" style={{ justifyContent: 'center' }}>
                       <span>Hiring Priority</span>
@@ -2377,7 +2473,7 @@ export default function SupplyDemandReport({
               <tbody>
                 {filteredUnpivotedList.length === 0 ? (
                   <tr>
-                    <td colSpan={9} className="pivot-empty-state-cell" style={{ textAlign: 'center', padding: '3.5rem' }}>
+                    <td colSpan={10} className="pivot-empty-state-cell" style={{ textAlign: 'center', padding: '3.5rem' }}>
                       <div className="empty-state-box">
                         <p>No records match your filter criteria.</p>
                         <button type="button" className="btn btn-secondary" onClick={handleResetFilters}>
@@ -2416,6 +2512,37 @@ export default function SupplyDemandReport({
                           <span className="teacher-id-chip" style={{ fontWeight: 700 }}>
                             {item.dimensionLabel}
                           </span>
+                        </td>
+                        {/* Remaining Free & Sessions (Audio 2: details from Tutor Availability without matrix button) */}
+                        <td style={{ minWidth: '165px' }}>
+                          {item.possibleSessions === 0 && item.remainingMinutes === 0 ? (
+                            <span style={{ fontSize: '0.82rem', color: '#991b1b', fontStyle: 'italic', fontWeight: 700 }}>
+                              No Free Slots
+                            </span>
+                          ) : (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
+                                <span 
+                                  className={`session-badge ${item.possibleSessions > 0 ? 'active' : 'zero'}`}
+                                  style={{
+                                    fontSize: '0.74rem',
+                                    fontWeight: 800,
+                                    padding: '0.15rem 0.55rem',
+                                    borderRadius: '6px',
+                                    background: item.possibleSessions > 0 ? '#ecfdf5' : '#fef2f2',
+                                    color: item.possibleSessions > 0 ? '#047857' : '#b91c1c',
+                                    border: `1px solid ${item.possibleSessions > 0 ? '#a7f3d0' : '#fecaca'}`
+                                  }}
+                                  title={`${item.possibleSessions} Session(s) Possible across qualified teachers for this ${dimensionHeaderLabel}`}
+                                >
+                                  {item.possibleSessions} Sess. Poss.
+                                </span>
+                              </div>
+                              <div style={{ fontSize: '0.74rem', color: 'var(--text-secondary, #64748b)', fontWeight: 600 }}>
+                                {item.remainingSlotsCount} {item.remainingSlotsCount === 1 ? 'slot' : 'slots'} open ({formatDuration(item.remainingMinutes)})
+                              </div>
+                            </div>
+                          )}
                         </td>
                         <td style={{ textAlign: 'center' }}>
                           {item.priority && (

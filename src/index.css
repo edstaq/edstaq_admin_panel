@@ -4178,6 +4178,52 @@ body {
   color: #475569;
 }
 
+/* Vacant Toggle Button */
+.vacant-badge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.48rem 0.95rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.vacant-badge-btn:hover {
+  border-color: #10b981;
+  color: #047857;
+  background: #f0fdf4;
+  transform: translateY(-1px);
+}
+
+.vacant-badge-btn.active {
+  background: #dcfce7;
+  border-color: #10b981;
+  color: #15803d;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15), 0 2px 6px rgba(21, 128, 61, 0.12);
+}
+
+.vacant-badge-counter {
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  line-height: 1.1;
+}
+
+.vacant-badge-btn:not(.active) .vacant-badge-counter {
+  background: #e2e8f0;
+  color: #475569;
+}
+
 /* ========================================================
    PREMIUM SAAS SEARCH BOX (Non-Stock, Ultra-Polished)
    ======================================================== */

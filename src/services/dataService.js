@@ -884,7 +884,7 @@ export function parseDemoDate(dateStr) {
  * - Urgent pending demos without teachers highlighted with top priority (Audio 1)
  */
 export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = [], settings = {}) {
-  const { demoBook = [], subjects = [] } = rawData;
+  const { demoBook = [], subjects = [], teacherAssign = [] } = rawData;
 
   // 1. Build Subjects Map (Raw Department is empty in DB - Audio 1)
   const subjectMap = new Map();
@@ -982,6 +982,62 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
     });
   });
 
+  // 2b. Process Active & HOLD Teacher Allocations (Current Committed Demand)
+  const activeHoldAllocations = [];
+  teacherAssign.forEach((asg, idx) => {
+    const rawStatus = (asg['Status'] || asg['status'] || '').trim();
+    const upperStatus = rawStatus.toUpperCase();
+    const isHold = upperStatus === 'HOLD';
+    const isActive = upperStatus === 'ACTIVE';
+    // Only Active & HOLD are current allocations
+    if (!isHold && !isActive) return;
+
+    const subId = (asg['Subject ID'] || asg['Subject Id'] || asg['subject id'] || '').trim();
+    const sub = subjectMap.get(subId) || {
+      id: subId,
+      name: 'Unknown Subject',
+      stage: 'Unknown Class',
+      board: 'Unknown Board',
+      level: 'General',
+      department: '',
+      label: subId
+    };
+
+    const teacherId = (asg['Teacher ID'] || asg['Teacher Id'] || '').trim();
+    const rawStartDate = (asg['Start Date'] || asg['Start date'] || '').trim();
+    const parsedDate = parseDemoDate(rawStartDate);
+
+    activeHoldAllocations.push({
+      demoId: asg['Teacher Assign ID'] || `TAS_${idx}`,
+      assignmentId: asg['Teacher Assign ID'] || `TAS_${idx}`,
+      studentName: (asg['Class Room ID'] || asg['Student ID'] || 'Enrolled Student').trim(),
+      studentId: (asg['Student ID'] || '').trim(),
+      classRoomId: (asg['Class Room ID'] || '').trim(),
+      phone: '',
+      subjectId: subId,
+      subjectName: sub.name,
+      stage: sub.stage,
+      board: sub.board,
+      level: sub.level,
+      department: sub.department,
+      label: sub.label,
+      teacherId,
+      isTeacherMissing: !teacherId,
+      isUrgentPending: !teacherId && isHold,
+      isLostNoTeacher: false,
+      status: isHold ? 'HOLD' : 'Active',
+      allocationStatus: rawStatus,
+      slotDate: rawStartDate,
+      parsedDate,
+      slotTime: asg['Start Time'] || '',
+      slotEndTime: asg['End Time'] || '',
+      days: asg['Days'] || '',
+      medium: asg['Medium'] || '',
+      meetingLink: asg['Meet Link'] || '',
+      isAllocation: true
+    });
+  });
+
   // 3. Process Teacher Supply (Audio 2 & 3: Teachers with at least 1 available session)
   const teacherSupplyMap = new Map();
   const allActiveTeachers = (teacherSummaries || []).filter(t => 
@@ -1013,6 +1069,10 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
         phone: t.phone || t['Phone Number'] || '',
         teachLanguages: t.teachLanguages || [],
         possibleSessions: possSessions,
+        remainingMinutes: t.remainingMinutes || 0,
+        remainingSlotsCount: t.remainingSlotsCount || 0,
+        totalMinutes: t.totalMinutes || 0,
+        totalSlotsCount: t.totalSlotsCount || 0,
         totalSubjectsCount: n,
         fragilityScore,
         isHighFragility,
@@ -1266,6 +1326,7 @@ export function processSupplyDemandAnalytics(rawData = {}, teacherSummaries = []
     detailedRows,
     hiringActionPlan,
     processedDemos,
+    activeHoldAllocations,
     subjectCatalog: Array.from(subjectMap.values())
   };
 }
